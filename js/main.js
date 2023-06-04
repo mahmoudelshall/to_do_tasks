@@ -113,3 +113,15 @@ let updateTask = function (key, el) {
     );
     write();
 }
+const sortByName = function(){
+    tasks.sort((a, b) =>
+        a.name.toLowerCase() > b.name.toLowerCase() ? 1 : b.name.toLowerCase() > a.name.toLowerCase() ? -1 : 0
+    );
+    write();
+}
+const sortByPriority = function(){
+    tasks.sort((a, b) =>
+        a.priority < b.priority ? 1 : b.priority < a.priority ? -1 : 0
+    );
+    write();
+}

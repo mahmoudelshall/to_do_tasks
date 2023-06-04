@@ -16,7 +16,7 @@
             color: aliceblue;
         }
 
-        .delete,.edit {
+        .delete,.edit,.pointer {
             cursor: pointer;
         }
         .hidden{
@@ -50,8 +50,8 @@
                 <thead>
                     <tr>
                         <th scope="col" style="width: 50px">#</th>
-                        <th scope="col" style="width: auto">Task</th>
-                        <th scope="col" style="width: auto">Priority</th>
+                        <th scope="col" style="width: auto" ><span class="pointer" onclick="sortByName()">Task</span> </th>
+                        <th scope="col" style="width: auto" ><span class="pointer" onclick="sortByPriority()">Priority</span></th>
                         <th scope="col" style="width: 50px">Action</th>
                     </tr>
                 </thead>
@@ -60,7 +60,20 @@
             </table>
         </div>
     </div>
+    <section class="container">
+      <div class="row">
+        <div class="col-6" >
+            <h2>All Students</h2>
+            <ol id="allStudents"></ol>
+        </div>
+        <div class="col-6">
+            <h2>Unique Students</h2>
+            <ol  id="uniqueStudents"></ol>
+        </div>
+      </div>
+    </section>
     <script src="js/main.js"></script>
+    <script src="js/students.js"></script>
 </body>
 
 </html>
